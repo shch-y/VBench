@@ -91,7 +91,7 @@ def main():
         'imaging_quality_preprocessing_mode': args.imaging_quality_preprocessing_mode
     }
 
-    device = torch.device("cuda")
+    device = torch.device("cpu")
     my_VBench = VBenchI2V(device, args.full_json_dir, args.output_path)
     
     print(f'start evaluation')
