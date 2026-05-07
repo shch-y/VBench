@@ -1,0 +1,38 @@
+# vbench_custom
+[project]
+name = "vbench"
+version = "0.1.5"
+description = "Video generation benchmark (custom mode in SmartDiffusion)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib",
+    "timm>=0.9",
+    "opencv-python",
+    "scikit-learn",
+    "scikit-image",
+    "openai-clip",
+    "decord",
+    "requests",
+    "pyyaml",
+    "easydict",
+    "pyiqa",
+    "omegaconf",
+    "fairscale>=0.4.4",
+    "tqdm",
+    "setuptools==69.5.1",
+    "dreamsim>=0.2.1",
+]
+[project.urls]
+Source = "https://github.com/Vchitect/VBench"
+[project.scripts]
+vbench = "vbench.cli.vbench:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vbench*"]
